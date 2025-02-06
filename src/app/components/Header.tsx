@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || isMobileMenuOpen
           ? "py-2 bg-gray-900/95 backdrop-blur-md shadow-lg" 
           : "py-4 bg-transparent"
       }`}
@@ -111,26 +111,28 @@ export default function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden mt-4"
+              className="md:hidden"
             >
-              <div className="flex flex-col space-y-4 py-4">
-                {menuItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-gray-300 hover:text-white transition-colors px-4 py-2 rounded-lg
-                      hover:bg-white/10"
+              <div className="fixed left-0 right-0 top-[60px] px-4 pb-6 bg-gray-900 shadow-lg border-t border-gray-800">
+                <div className="flex flex-col space-y-4 py-4 max-h-[calc(100vh-80px)] overflow-y-auto">
+                  {menuItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-gray-300 hover:text-white transition-colors px-4 py-3 rounded-lg
+                        hover:bg-white/10 active:bg-white/20"
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                  <Button 
+                    className="bg-brand hover:bg-brand/90 text-white mx-4 py-6 rounded-full
+                      transition-all duration-300 mt-4"
                   >
-                    {item.title}
-                  </Link>
-                ))}
-                <Button 
-                  className="bg-brand hover:bg-brand/90 text-white mx-4 py-2 rounded-full
-                    transition-all duration-300"
-                >
-                  Começar Agora
-                </Button>
+                    Começar Agora
+                  </Button>
+                </div>
               </div>
             </motion.div>
           )}

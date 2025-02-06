@@ -123,7 +123,7 @@ export default function HappyUsers() {
                     </div>
 
                     <p className="text-gray-300 text-lg leading-relaxed italic">
-                      "{testimonial.testimonial}"
+                      &ldquo;{testimonial.testimonial}&rdquo;
                     </p>
 
                     <div className="pt-4 border-t border-gray-700">

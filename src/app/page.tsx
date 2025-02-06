@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs"
 import HappyUsers from "./components/HappyUsers"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import ScrollToTop from "./components/ScrollToTop"
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

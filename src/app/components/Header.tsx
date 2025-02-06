@@ -26,6 +26,14 @@ export default function Header() {
     { title: "Contato", href: "#contact" },
   ]
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -43,7 +51,8 @@ export default function Header() {
             transition={{ duration: 0.5 }}
           >
             <Link 
-              href="/" 
+              href="/#home" 
+              onClick={scrollToTop}
               className="relative block bg-white rounded-lg p-2 hover:opacity-90 transition-opacity"
             >
               <div className="w-[120px] h-[30px] relative">
@@ -69,6 +78,7 @@ export default function Header() {
               <Link
                 key={index}
                 href={item.href}
+                onClick={item.href === "#home" ? scrollToTop : undefined}
                 className="text-gray-300 hover:text-white transition-colors relative group"
               >
                 {item.title}
@@ -119,7 +129,10 @@ export default function Header() {
                     <Link
                       key={index}
                       href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      onClick={(e) => {
+                        setIsMobileMenuOpen(false)
+                        if (item.href === "#home") scrollToTop(e)
+                      }}
                       className="text-gray-300 hover:text-white transition-colors px-4 py-3 rounded-lg
                         hover:bg-white/10 active:bg-white/20"
                     >

@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs"
 import HappyUsers from "./components/HappyUsers"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import FAQ from "./components/FAQ"
 import ScrollToTop from "./components/ScrollToTop"
 
 export default function Page() {
@@ -16,6 +17,7 @@ export default function Page() {
         <Services />
         <AboutUs />
         <HappyUsers />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

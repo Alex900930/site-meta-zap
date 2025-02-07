@@ -8,49 +8,49 @@ export default function Services() {
     {
       icon: <MessageSquare className="h-8 w-8" />,
       title: "Atendimento Integrado",
-      description: "Unifique todas as conversas do WhatsApp em uma única plataforma intuitiva e poderosa.",
+      description: "Centralize e gerencie seus atendimentos pelo WhatsApp de forma fácil e organizada.",
       gradient: "from-blue-500 to-cyan-400",
     },
     {
       icon: <Bot className="h-8 w-8" />,
       title: "Automação Inteligente",
-      description: "Automatize respostas e processos com nossa IA avançada para atendimento 24/7.",
+      description: "Atenda seus clientes via WhatsApp com eficiência e praticidade.",
       gradient: "from-purple-500 to-pink-400",
     },
     {
       icon: <BarChart2 className="h-8 w-8" />,
       title: "Análise Avançada",
-      description: "Métricas detalhadas e insights em tempo real para otimizar seu atendimento.",
+      description: "Transforme seu WhatsApp em uma poderosa ferramenta de atendimento.",
       gradient: "from-green-500 to-emerald-400",
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: "Gestão de Equipe",
-      description: "Gerencie sua equipe com eficiência, distribuição inteligente de demandas.",
+      description: "Organize suas conversas e otimize seu atendimento via WhatsApp.",
       gradient: "from-orange-500 to-yellow-400",
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Segurança Total",
-      description: "Proteção de dados e conformidade com LGPD para suas conversas e clientes.",
+      description: "Acelere seu atendimento ao cliente com nosso gerenciador de WhatsApp.",
       gradient: "from-red-500 to-rose-400",
     },
     {
       icon: <Clock className="h-8 w-8" />,
       title: "Agendamento Smart",
-      description: "Sistema inteligente de agendamento e lembretes automáticos.",
+      description: "Um sistema completo para atendimento rápido e personalizado no WhatsApp.",
       gradient: "from-indigo-500 to-blue-400",
     },
     {
       icon: <Zap className="h-8 w-8" />,
       title: "Respostas Rápidas",
-      description: "Templates personalizados e atalhos para agilizar o atendimento.",
+      description: "Simplifique o atendimento ao cliente e aumente a satisfação pelo WhatsApp.",
       gradient: "from-pink-500 to-purple-400",
     },
     {
       icon: <Settings className="h-8 w-8" />,
       title: "Personalização Total",
-      description: "Adapte a plataforma às necessidades específicas do seu negócio.",
+      description: "Gerencie todas as interações via WhatsApp em um só lugar.",
       gradient: "from-teal-500 to-green-400",
     },
   ]
@@ -75,14 +75,13 @@ export default function Services() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Recursos
+            Veja o que você
             <span className="bg-gradient-to-r from-brand to-red-500 text-transparent bg-clip-text">
-              {" "}Revolucionários
+              {" "}vai receber
             </span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Descubra como nossa plataforma pode transformar seu atendimento ao cliente
-            com recursos inovadores e tecnologia de ponta.
+            Conheça todas as funcionalidades exclusivas que você terá acesso ao adquirir o Meta Zap Pro.
           </p>
         </motion.div>
 

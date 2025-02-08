@@ -44,7 +44,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl md:text-6xl font-bold text-center mb-6"
               >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Meta Zap Pro</span>{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Meta Zap Pro!</span>{" "}
                 <span className="text-white">Centralize Tudo.</span>{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Venda Mais.</span>
               </motion.h1>

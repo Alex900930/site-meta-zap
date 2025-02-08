@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Instagram, Facebook, Linkedin } from "lucide-react"
 import { useState } from "react"
 import {
   Dialog,
@@ -11,7 +11,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { InstagramIcon, FacebookIcon, LinkedinIcon } from "lucide-react"
 
 export default function Footer() {
   const [showDialog, setShowDialog] = useState(false)
@@ -50,7 +49,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
-                <InstagramIcon className="h-6 w-6" />
+                <Instagram className="h-6 w-6" />
               </a>
               <a
                 href="#"
@@ -58,7 +57,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
-                <FacebookIcon className="h-6 w-6" />
+                <Facebook className="h-6 w-6" />
               </a>
               <a
                 href="#"
@@ -66,7 +65,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <LinkedinIcon className="h-6 w-6" />
+                <Linkedin className="h-6 w-6" />
               </a>
             </div>
           </motion.div>

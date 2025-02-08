@@ -30,7 +30,15 @@ export default function FAQ() {
     {
       question: "Posso acessar de qualquer dispositivo?",
       answer: "Sim! Por ser uma plataforma web, você pode acessar o Meta Zap Pro de qualquer dispositivo (computador, tablet ou celular) que tenha um navegador e conexão com internet, mantendo todas suas conversas sincronizadas."
-    }
+    },
+    {
+        question: "Preciso ter conhecimento técnico?",
+        answer: "Não! Nossa solução é intuitiva e fácil de usar. Além disso, oferecemos treinamento completo e suporte contínuo."
+      },
+      {
+        question: "Como isso vai aumentar minhas vendas?",
+        answer: "Nosso sistema automatiza respostas rápidas, qualifica leads e gerencia múltiplas conversas simultaneamente, permitindo que você atenda mais clientes em menos tempo. Em média, nossos clientes relatam um aumento de 40% nas vendas."
+      },
   ]
 
   return (

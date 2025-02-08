@@ -36,22 +36,29 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
-              Revolucione seu
-              <span className="bg-gradient-to-r from-brand to-red-500 text-transparent bg-clip-text">
-                {" "}
-                Atendimento
-              </span>
-            </h1>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
-            >
-              Automatize, gerencie e potencialize seu atendimento no WhatsApp com inteligência e eficiência.
-            </motion.p>
+            <div className="flex flex-col items-center justify-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl md:text-6xl font-bold text-center mb-6"
+              >
+                <span className="text-white">Automatize seu</span>{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">WhatsApp</span>{" "}
+                <span className="text-white">e</span>{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Multiplique</span>{" "}
+                <span className="text-white">suas Vendas</span>
+              </motion.h1>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-xl text-gray-200 text-center max-w-2xl mb-8 font-medium"
+                >
+                Atenda mais clientes, venda mais e economize tempo com nossa solução profissional de automação. Comece agora e veja resultados em 24 horas.
+              </motion.p>
+            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

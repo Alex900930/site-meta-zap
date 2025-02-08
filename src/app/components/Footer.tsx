@@ -11,12 +11,13 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
+import { InstagramIcon, FacebookIcon, LinkedinIcon } from "lucide-react"
 
 export default function Footer() {
   const [showDialog, setShowDialog] = useState(false)
   const currentYear = new Date().getFullYear()
 
-  const handleSocialClick = (e: React.MouseEvent) => {
+  const handleSocialClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     setShowDialog(true)
   }
@@ -43,18 +44,30 @@ export default function Footer() {
               inteligentes e integradas com o WhatsApp.
             </p>
             <div className="flex space-x-4 pt-4">
-              <Link href="#" target="_blank" rel="noopener noreferrer"
-                className="hover:text-brand transition-colors">
-                <Facebook size={20} />
-              </Link>
-              <Link href="#" target="_blank" rel="noopener noreferrer"
-                className="hover:text-brand transition-colors">
-                <Instagram size={20} />
-              </Link>
-              <Link href="#" target="_blank" rel="noopener noreferrer"
-                className="hover:text-brand transition-colors">
-                <Linkedin size={20} />
-              </Link>
+              <a
+                href="#"
+                onClick={handleSocialClick}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <InstagramIcon className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                onClick={handleSocialClick}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <FacebookIcon className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                onClick={handleSocialClick}
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="h-6 w-6" />
+              </a>
             </div>
           </motion.div>
 

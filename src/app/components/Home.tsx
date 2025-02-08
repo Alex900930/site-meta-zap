@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MessageSquare } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Home() {
   const whatsappNumber = "5585989329627"
@@ -29,7 +30,7 @@ export default function Home() {
 
       {/* Contenido principal */}
       <div className="container mx-auto px-4 z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,11 +44,9 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="text-4xl md:text-6xl font-bold text-center mb-6"
               >
-                <span className="text-white">Automatize seu</span>{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">WhatsApp</span>{" "}
-                <span className="text-white">e</span>{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Multiplique</span>{" "}
-                <span className="text-white">suas Vendas</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Meta Zap Pro</span>{" "}
+                <span className="text-white">Centralize Tudo.</span>{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">Venda Mais.</span>
               </motion.h1>
               
               <motion.p
@@ -56,7 +55,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-xl text-gray-200 text-center max-w-2xl mb-8 font-medium"
                 >
-                Atenda mais clientes, venda mais e economize tempo com nossa solução profissional de automação. Comece agora e veja resultados em 24 horas.
+                Transforme seu WhatsApp em uma <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 font-bold">central de atendimento profissional</span>. Organize, automatize e aumente suas vendas em um só lugar.
               </motion.p>
             </div>
 
@@ -70,22 +69,40 @@ export default function Home() {
                 <Button
                   className="bg-brand hover:bg-brand/90 text-white px-8 py-6 text-lg rounded-full 
                     transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand/50
-                    flex items-center gap-2 min-w-[200px] justify-center group"
+                    flex items-center gap-2 min-w-[250px] justify-center group"
                 >
                   <MessageSquare className="w-5 h-5 transition-transform group-hover:scale-110" />
-                  Começar Agora
+                  Garantir Minha Demonstração Grátis
                 </Button>
               </Link>
               
-              <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 
-                    px-8 py-6 text-lg rounded-full transition-all duration-300 min-w-[200px]"
-                >
-                  Ver Demo
-                </Button>
-              </Link>
+              <div className="text-gray-400 text-sm px-4 py-2 bg-gray-800/50 rounded-lg">
+                🔥 Últimas 5 vagas para demonstração esta semana
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="flex items-center justify-center gap-2 mt-4"
+            >
+              <div className="flex -space-x-2">
+                {[11, 12, 13, 14].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full overflow-hidden border-2 border-black">
+                    <Image 
+                      src={`/images/logo${i}.jpeg`} 
+                      alt={`Logo empresa ${i}`}
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-400 text-sm">
+                +150 empresas demonstraram interesse esta semana
+              </p>
             </motion.div>
 
             {/* Estadísticas */}
@@ -93,19 +110,23 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto mb-14 sm:mb-2"
             >
               <div className="text-center">
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">98%</h3>
-                <p className="text-gray-400">Satisfação</p>
+                <p className="text-gray-400">Satisfação dos Clientes</p>
               </div>
               <div className="text-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">2x</h3>
-                <p className="text-gray-400">Mais Vendas</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">300%</h3>
+                <p className="text-gray-400">Aumento em Vendas</p>
               </div>
-              <div className="text-center hidden md:block">
+              <div className="text-center">
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</h3>
-                <p className="text-gray-400">Suporte</p>
+                <p className="text-gray-400">Suporte Dedicado</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">500+</h3>
+                <p className="text-gray-400">Clientes Ativos</p>
               </div>
             </motion.div>
           </motion.div>

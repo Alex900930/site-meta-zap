@@ -12,38 +12,45 @@ import 'swiper/css/effect-coverflow'
 export default function HappyUsers() {
   const testimonials = [
     {
-      name: "Carlos Silva",
+      name: "Maria Santos",
+      role: "Gerente",
+      company: "Farmácia Saúde Total",
+      testimonial: "Com o Meta Zap Pro, nossa farmácia reduziu o tempo de resposta em 50%! Agora conseguimos atender o dobro de clientes com a mesma equipe.",
+      rating: 5
+    },
+    {
+      name: "Dr. Carlos Oliveira",
+      role: "Diretor",
+      company: "Clínica Bem Estar",
+      testimonial: "Nossa clínica aumentou em 40% o número de agendamentos após implementar o Meta Zap Pro. A automação das confirmações reduziu as faltas em 60%!",
+      rating: 5
+    },
+    {
+      name: "Ana Lima",
+      role: "Coordenadora",
+      company: "Colégio Futuro",
+      testimonial: "A comunicação com os pais melhorou significativamente! O Meta Zap Pro nos ajudou a manter todos informados e aumentou a participação nas reuniões escolares em 70%.",
+      rating: 5
+    },
+    {
+      name: "Roberto Mendes",
+      role: "Proprietário",
+      company: "Restaurante Sabor & Arte",
+      testimonial: "Desde que implementamos o Meta Zap Pro, nossas reservas aumentaram 45% e o tempo de resposta para pedidos delivery caiu pela metade. Uma ferramenta essencial!",
+      rating: 5
+    },
+    {
+      name: "Patricia Alves",
+      role: "Gerente Comercial",
+      company: "Imobiliária Premium",
+      testimonial: "O Meta Zap Pro transformou nosso atendimento! Conseguimos aumentar em 80% o número de visitas agendadas e melhoramos significativamente a taxa de fechamento.",
+      rating: 5
+    },
+    {
+      name: "Lucas Costa",
       role: "CEO",
-      company: "Tech Solutions",
-      testimonial: "O Meta Zap Pro revolucionou completamente nossa forma de atender clientes. A eficiência aumentou em mais de 80% e nossos clientes estão mais satisfeitos do que nunca.",
-      rating: 5
-    },
-    {
-      name: "Ana Santos",
-      role: "Diretora de Marketing",
-      company: "Digital Growth",
-      testimonial: "Implementamos o Meta Zap Pro há 6 meses e os resultados são impressionantes. O suporte é excepcional e as funcionalidades nos ajudaram a escalar nosso atendimento.",
-      rating: 5
-    },
-    {
-      name: "Roberto Lima",
-      role: "Gerente de Vendas",
-      company: "Mega Store",
-      testimonial: "A automação inteligente e a interface intuitiva fazem toda a diferença. Nossa equipe adorou e os resultados em vendas aumentaram significativamente.",
-      rating: 5
-    },
-    {
-      name: "Mariana Costa",
-      role: "Proprietária",
-      company: "Beauty Care",
-      testimonial: "Excelente ferramenta! Conseguimos organizar melhor nossa equipe e aumentar as vendas. O atendimento ficou muito mais profissional e eficiente.",
-      rating: 5
-    },
-    {
-      name: "Paulo Mendes",
-      role: "Diretor Comercial",
-      company: "Solutions Corp",
-      testimonial: "O Meta Zap Pro superou todas as nossas expectativas. A integração foi simples e os resultados são surpreendentes. Recomendo fortemente!",
+      company: "Academia Vida Ativa",
+      testimonial: "Com o Meta Zap Pro, automatizamos o acompanhamento dos alunos e reduzimos a evasão em 55%. A retenção de clientes nunca esteve tão alta!",
       rating: 5
     }
   ]

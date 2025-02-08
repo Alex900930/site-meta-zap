@@ -70,7 +70,7 @@ export default function Home() {
                 </Button>
               </Link>
               
-              <Link href="#demo">
+              <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 

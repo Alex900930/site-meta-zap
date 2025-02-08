@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Check, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -15,6 +16,10 @@ export default function AboutUs() {
     '/images/logo14.jpeg',
     '/images/logo15.jpeg',
   ]
+
+  const whatsappNumber = "5585989329627"
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre o Meta Zap Pro."
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
     <section id="about" className="py-24 md:py-32 bg-black relative overflow-hidden">
@@ -77,12 +82,15 @@ export default function AboutUs() {
               transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button 
-                className="bg-brand hover:bg-brand/90 text-white px-8 py-6 rounded-full
-                  transition-all duration-300 transform hover:scale-105"
-              >
-                Começar Agora
-              </Button>
+              <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Button 
+                    className="bg-brand hover:bg-brand/90 text-white px-8 py-6 rounded-full
+                    transition-all duration-300 transform hover:scale-105"
+                >
+                    Começar Agora
+                </Button>
+              </Link>
+              <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline"
                 className="bg-transparent border-2 border-gray-700 text-white hover:bg-white/10
@@ -90,6 +98,7 @@ export default function AboutUs() {
               >
                 Agendar Demo
               </Button>
+              </Link>
             </motion.div>
           </motion.div>
 

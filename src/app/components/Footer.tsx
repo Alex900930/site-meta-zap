@@ -122,10 +122,10 @@ export default function Footer() {
                 © {currentYear} Meta Zap Pro. Todos os direitos reservados.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <Link href="/privacy" className="text-sm text-gray-400 hover:text-brand transition-colors">
+                <Link href="#" className="text-sm text-gray-400 hover:text-brand transition-colors">
                   Política de Privacidade
                 </Link>
-                <Link href="/terms" className="text-sm text-gray-400 hover:text-brand transition-colors">
+                <Link href="#" className="text-sm text-gray-400 hover:text-brand transition-colors">
                   Termos de Uso
                 </Link>
               </div>

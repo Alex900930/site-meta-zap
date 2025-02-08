@@ -10,6 +10,10 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const whatsappNumber = "5585989329627"
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre o Meta Zap Pro."
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
@@ -94,12 +98,14 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             className="hidden md:block"
           >
-            <Button 
-              className="bg-brand hover:bg-brand/90 text-white px-6 py-2 rounded-full
-                transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand/50"
-            >
-              Começar Agora
-            </Button>
+            <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="bg-brand hover:bg-brand/90 text-white px-6 py-2 rounded-full
+                  transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand/50"
+              >
+                Começar Agora
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Botón de menú móvil */}
@@ -139,12 +145,15 @@ export default function Header() {
                       {item.title}
                     </Link>
                   ))}
-                  <Button 
-                    className="bg-brand hover:bg-brand/90 text-white mx-4 py-6 rounded-full
-                      transition-all duration-300 mt-4"
-                  >
-                    Começar Agora
-                  </Button>
+                  <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                        className="bg-brand hover:bg-brand/90 text-white mx-4 py-6 rounded-full
+                        transition-all duration-300 mt-4"
+                    >
+                        Começar Agora
+                    </Button>
+                  </Link>
+                 
                 </div>
               </div>
             </motion.div>

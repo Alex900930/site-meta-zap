@@ -22,12 +22,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const menuItems = [
-    { title: "Início", href: "#home" },
-    { title: "Serviços", href: "#services" },
-    { title: "Sobre", href: "#about" },
-    { title: "Depoimentos", href: "#testimonials" },
-    { title: "Contato", href: "#contact" },
+  const navigationItems = [
+    { name: "Início", href: "/" },
+    { name: "Serviços", href: "/#services" },
+    { name: "Sobre", href: "/#about" },
+    { name: "Depoimentos", href: "/#testimonials" },
+    { name: "Perguntas Frequentes", href: "/#faq" },
+    { name: "Contato", href: "/#contact" },
   ]
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -78,14 +79,14 @@ export default function Header() {
             transition={{ duration: 0.5 }}
             className="hidden md:flex items-center space-x-8"
           >
-            {menuItems.map((item, index) => (
+            {navigationItems.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
                 onClick={item.href === "#home" ? scrollToTop : undefined}
                 className="text-gray-300 hover:text-white transition-colors relative group"
               >
-                {item.title}
+                {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
@@ -131,7 +132,7 @@ export default function Header() {
             >
               <div className="fixed left-0 right-0 top-[60px] px-4 pb-6 bg-gray-900 shadow-lg border-t border-gray-800">
                 <div className="flex flex-col space-y-4 py-4 max-h-[calc(100vh-80px)] overflow-y-auto">
-                  {menuItems.map((item, index) => (
+                  {navigationItems.map((item, index) => (
                     <Link
                       key={index}
                       href={item.href}
@@ -142,7 +143,7 @@ export default function Header() {
                       className="text-gray-300 hover:text-white transition-colors px-4 py-3 rounded-lg
                         hover:bg-white/10 active:bg-white/20"
                     >
-                      {item.title}
+                      {item.name}
                     </Link>
                   ))}
                   <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">

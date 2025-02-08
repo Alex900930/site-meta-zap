@@ -2,9 +2,28 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { useState } from "react"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
 
 export default function Footer() {
+  const [showDialog, setShowDialog] = useState(false)
   const currentYear = new Date().getFullYear()
+
+  const handleSocialClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setShowDialog(true)
+  }
+
+  const whatsappNumber = "5585989329627"
+  const whatsappMessage = "Olá! Gostaria de saber mais sobre o Meta Zap Pro."
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -24,15 +43,15 @@ export default function Footer() {
               inteligentes e integradas com o WhatsApp.
             </p>
             <div className="flex space-x-4 pt-4">
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              <Link href="#" target="_blank" rel="noopener noreferrer"
                 className="hover:text-brand transition-colors">
                 <Facebook size={20} />
               </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              <Link href="#" target="_blank" rel="noopener noreferrer"
                 className="hover:text-brand transition-colors">
                 <Instagram size={20} />
               </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <Link href="#" target="_blank" rel="noopener noreferrer"
                 className="hover:text-brand transition-colors">
                 <Linkedin size={20} />
               </Link>
@@ -132,6 +151,39 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
+
+        {/* Diálogo de Redes Sociales */}
+        <Dialog open={showDialog} onOpenChange={setShowDialog}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-lg font-semibold">
+                Em breve nas redes sociais! 🚀
+              </DialogTitle>
+              <DialogDescription className="pt-4">
+                Estamos aperfeiçoando nossa presença nas redes sociais para trazer
+                o melhor conteúdo para você! Enquanto isso, que tal falar com a
+                gente pelo WhatsApp?
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex justify-end space-x-4 pt-4">
+              <Button
+                variant="outline"
+                onClick={() => setShowDialog(false)}
+              >
+                Fechar
+              </Button>
+              <Link 
+                href={whatsappLink}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-brand hover:bg-brand/90">
+                  Falar no WhatsApp
+                </Button>
+              </Link>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </footer>
   )

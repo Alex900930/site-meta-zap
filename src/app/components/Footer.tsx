@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Instagram, Facebook, Linkedin } from "lucide-react"
+import { Instagram, Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react"
 import { useState } from "react"
 import {
   Dialog,
@@ -119,21 +119,21 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-white mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
-                <Phone size={20} className="text-brand" />
+                <Phone className="h-5 w-5 text-brand" />
                 <Link href="https://wa.me/5585989329627" target="_blank" rel="noopener noreferrer"
                   className="hover:text-brand transition-colors">
                   +55 85 98932-9627
                 </Link>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={20} className="text-brand" />
+                <Mail className="h-5 w-5 text-brand" />
                 <a href="mailto:contato@metazappro.com" 
                   className="hover:text-brand transition-colors">
                   alessander@metazappro.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin size={20} className="text-brand flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-brand flex-shrink-0" />
                 <span>Canindé, Ceará<br />Brasil</span>
               </li>
             </ul>

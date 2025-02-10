@@ -67,9 +67,9 @@ export default function Home() {
             >
               <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button
-                  className="bg-brand hover:bg-brand/90 text-white px-8 py-6 text-lg rounded-full 
+                  className="bg-brand hover:bg-brand/90 text-white px-4 sm:px-14 py-6 text-lg rounded-full 
                     transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand/50
-                    flex items-center gap-2 min-w-[180px] sm:min-w-[250px] justify-center group"
+                    flex items-center gap-2 justify-center group"
                 >
                   <MessageSquare className="w-5 h-5 transition-transform group-hover:scale-110" />
                   Garantir Minha Demonstração Grátis

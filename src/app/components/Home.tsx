@@ -69,7 +69,7 @@ export default function Home() {
                 <Button
                   className="bg-brand hover:bg-brand/90 text-white px-8 py-6 text-lg rounded-full 
                     transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand/50
-                    flex items-center gap-2 min-w-[250px] justify-center group"
+                    flex items-center gap-2 min-w-[180px] sm:min-w-[250px] justify-center group"
                 >
                   <MessageSquare className="w-5 h-5 transition-transform group-hover:scale-110" />
                   Garantir Minha Demonstração Grátis
@@ -106,7 +106,7 @@ export default function Home() {
             </motion.div>
 
             {/* Estadísticas */}
-            <motion.div
+           {/*  <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
@@ -128,7 +128,7 @@ export default function Home() {
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">500+</h3>
                 <p className="text-gray-400">Clientes Ativos</p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
 
